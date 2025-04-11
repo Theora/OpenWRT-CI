@@ -59,7 +59,6 @@ UPDATE_PACKAGE "jq" "jqlang/jq​" "master"
 UPDATE_PACKAGE "diskman" "lisaac/luci-app-diskman​" "master"
 UPDATE_PACKAGE "vlmcsd" "cokebar/luci-app-vlmcsd" "master"
 UPDATE_PACKAGE "AdGuardHome" "AdguardTeam/AdGuardHome" "master"
-UPDATE_PACKAGE "quickstart" "animegasan/luci-app-quickstart" "main"
 
 UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
 UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
