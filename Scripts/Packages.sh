@@ -33,7 +33,7 @@ UPDATE_PACKAGE() {
 
 	# 处理克隆的仓库
 	if [[ $PKG_SPECIAL == "pkg" ]]; then
-		find ./$REPO_NAME/*/ -maxdepth 3 -type d -iname "*$PKG_NAME*" -prune -exec cp -rf {} ./ \;
+		find ./$REPO_NAME/*/ -maxdepth 5 -type d -iname "*$PKG_NAME*" -prune -exec cp -rf {} ./ \;
 		rm -rf ./$REPO_NAME/
 	elif [[ $PKG_SPECIAL == "name" ]]; then
 		mv -f $REPO_NAME $PKG_NAME
@@ -52,15 +52,15 @@ UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
-UPDATE_PACKAGE "shadowsocks-libev" "xiaorouji/openwrt-passwall-packages" "main" "pkg"
-UPDATE_PACKAGE "geoview" "xiaorouji/openwrt-passwall-packages" "main" "pkg"
+UPDATE_PACKAGE "shadowsocks-libev" "xiaorouji/openwrt-passwall-packages" "main" "name"
+UPDATE_PACKAGE "geoview" "xiaorouji/openwrt-passwall-packages" "main" "name"
 UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main" "pkg"
 UPDATE_PACKAGE "ssr-plus" "fw876/helloworld" "master"
-UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main" "pkg"
-UPDATE_PACKAGE "luci-app-lucky" "gdy666/luci-app-lucky" "main" "pkg"
+UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main" "name"
+UPDATE_PACKAGE "luci-app-lucky" "gdy666/luci-app-lucky" "main" "name"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
-UPDATE_PACKAGE "applications/luci-app-diskman" "lisaac/luci-app-diskman" "master" "pkg" "diskman"
+UPDATE_PACKAGE "luci-app-diskman" "lisaac/luci-app-diskman" "master" "pkg" "diskman"
 
 UPDATE_PACKAGE "alist" "sbwml/luci-app-alist" "main"
 UPDATE_PACKAGE "easytier" "EasyTier/luci-app-easytier" "main"
@@ -78,7 +78,7 @@ fi
 UPDATE_VERSION() {
 	local PKG_NAME=$1
 	local PKG_MARK=${2:-false}
-	local PKG_FILES=$(find ./ ../feeds/packages/ -maxdepth 3 -type f -wholename "*/$PKG_NAME/Makefile")
+	local PKG_FILES=$(find ./ ../feeds/packages/ -maxdepth 5 -type f -wholename "*/$PKG_NAME/Makefile")
 
 	if [ -z "$PKG_FILES" ]; then
 		echo "$PKG_NAME not found!"
