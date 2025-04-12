@@ -1,24 +1,23 @@
 # OpenWRT-CI
-云编译OpenWRT固件
+Fork from VIKKING/immortalWRT
 
-官方版：
+Official：
 https://github.com/immortalwrt/immortalwrt.git
 
-高通版：
+Qualcomm version：
 https://github.com/VIKINGYFY/immortalwrt.git
 
-# 固件简要说明：
+# Firmware description：
 
-固件每天早上4点自动编译。
+Firmwares are compiled at 4 am automatically
+The time in the firmware information is the time when the compilation started, which is convenient for checking the upstream source code submission time
 
-固件信息里的时间为编译开始的时间，方便核对上游源码提交时间。
+ Only QUALCOMMAX, removed other
 
-MEDIATEK系列、QUALCOMMAX系列、ROCKCHIP系列、X86系列。
+# Brief description of catalog：
 
-# 目录简要说明：
+workflows——workflow github action (run QCA workflow to start compile manually)
 
-workflows——自定义CI配置
+Scripts——script to build contents in firmware
 
-Scripts——自定义脚本
-
-Config——自定义配置
+Config——configuration files
