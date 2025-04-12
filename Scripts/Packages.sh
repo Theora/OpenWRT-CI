@@ -52,12 +52,9 @@ UPDATE_PACKAGE "kucat" "sirpdboy/luci-theme-kucat" "js"
 UPDATE_PACKAGE "homeproxy" "VIKINGYFY/homeproxy" "main"
 UPDATE_PACKAGE "nikki" "nikkinikki-org/OpenWrt-nikki" "main"
 UPDATE_PACKAGE "openclash" "vernesong/OpenClash" "dev" "pkg"
-UPDATE_PACKAGE "shadowsocks-libev" "xiaorouji/openwrt-passwall-packages" "main" "name"
-UPDATE_PACKAGE "geoview" "xiaorouji/openwrt-passwall-packages" "main" "name"
+
 UPDATE_PACKAGE "passwall2" "xiaorouji/openwrt-passwall2" "main" "pkg"
 UPDATE_PACKAGE "ssr-plus" "fw876/helloworld" "master"
-UPDATE_PACKAGE "lucky" "gdy666/luci-app-lucky" "main" "name"
-UPDATE_PACKAGE "luci-app-lucky" "gdy666/luci-app-lucky" "main" "name"
 
 UPDATE_PACKAGE "luci-app-tailscale" "asvow/luci-app-tailscale" "main"
 UPDATE_PACKAGE "luci-app-diskman" "lisaac/luci-app-diskman" "master" "pkg" "diskman"
@@ -68,6 +65,8 @@ UPDATE_PACKAGE "gecoosac" "lwb1978/openwrt-gecoosac" "main"
 UPDATE_PACKAGE "mosdns" "sbwml/luci-app-mosdns" "v5" "" "v2dat"
 UPDATE_PACKAGE "qmodem" "FUjr/modem_feeds" "main"
 UPDATE_PACKAGE "viking" "VIKINGYFY/packages" "main" "" "luci-app-timewol luci-app-wolplus"
+UPDATE_PACKAGE "gdy666" "gdy666/luci-app-lucky" "main" "" "lucky luci-app-lucky"
+UPDATE_PACKAGE "xiaorouji" "xiaorouji/openwrt-passwall-packages" "main" "" "shadowsocks-libev geoview"
 UPDATE_PACKAGE "vnt" "lmq8267/luci-app-vnt" "main"
 
 if [[ $WRT_REPO != *"immortalwrt"* ]]; then
